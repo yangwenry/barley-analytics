@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>barley.analytics</groupId>
+	  	<artifactId>barley-analytics</artifactId>
+	  	<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion> 
+	<artifactId>analytics-data-connectors</artifactId>
+	<packaging>pom</packaging>
+	<name>CodeFarm Barley - Analytics Data Connectors Aggregator Module</name>
+	
+	<modules>
+		<module>barley.analytics.datasource.rdbms</module>
+	</modules>
+	
+</project>

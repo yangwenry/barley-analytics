@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>barley.analytics</groupId>
+	  	<artifactId>analytics-io</artifactId>
+	  	<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion> 
+	<artifactId>barley.analytics.api</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>CodeFarm Barley - Analytics Analytics Data API</name>
+	
+	<dependencies>
+		<dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.dataservice.commons</artifactId>
+        </dependency>        
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.dataservice.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.datasource.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.io.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        
+        
+	        
+	</dependencies>
+	
+</project>

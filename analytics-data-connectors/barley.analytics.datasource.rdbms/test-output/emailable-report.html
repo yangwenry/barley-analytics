@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">18</td><td class="numi">0</td><td class="numi">29.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest</td><td><a href="#m1"><b>setup</b>  </a></td><td class="numi">1</td><td>1564727560570</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest</td><td><a href="#m2"><b>destroy</b>  </a></td><td class="numi">1</td><td>1564727590279</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Default test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="18">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest</td><td><a href="#m3"><b>testDataRecordAddReadPerformance</b>  </a></td><td class="numi">1</td><td>1564727590250</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m4"><b>testDataRecordAddRetrieve</b>  </a></td><td class="numi">1</td><td>1564727590253</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m5"><b>testDataRecordCount</b>  </a></td><td class="numi">1</td><td>1564727590255</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m6"><b>testDataRecordDeleteWithIds</b>  </a></td><td class="numi">1</td><td>1564727590257</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m7"><b>testDataRecordDeleteWithTimestamps</b>  </a></td><td class="numi">1</td><td>1564727590259</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m8"><b>testDuplicateRecordDelete</b>  </a></td><td class="numi">1</td><td>1564727590260</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m9"><b>testDuplicateRecordSearch</b>  </a></td><td class="numi">1</td><td>1564727590262</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m10"><b>testLongTableNameCreate</b>  </a></td><td class="numi">1</td><td>1564727590263</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m11"><b>testMultipleDataRecordAddRetieve</b>  </a></td><td class="numi">1</td><td>1564727590265</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m12"><b>testMultipleDataRecordAddRetieveWithPagination1</b>  </a></td><td class="numi">1</td><td>1564727590266</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m13"><b>testMultipleDataRecordAddRetieveWithPagination2</b>  </a></td><td class="numi">1</td><td>1564727590268</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m14"><b>testMultipleDataRecordAddRetieveWithTimestampRange1</b>  </a></td><td class="numi">1</td><td>1564727590270</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m15"><b>testMultipleDataRecordAddRetieveWithTimestampRange2</b>  </a></td><td class="numi">1</td><td>1564727590271</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m16"><b>testMultipleDataRecordAddRetieveWithTimestampRange3</b>  </a></td><td class="numi">1</td><td>1564727590272</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m17"><b>testMultipleDataRecordAddRetrieveUpdate</b>  </a></td><td class="numi">1</td><td>1564727590274</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m18"><b>testRecordRetrievalWithFixedCount</b>  </a></td><td class="numi">1</td><td>1564727590276</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m19"><b>testTableCreateDelete</b>  </a></td><td class="numi">1</td><td>1564727590277</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m20"><b>testTableMT</b>  </a></td><td class="numi">1</td><td>1564727590278</td><td class="numi">0</td></tr>
+</table>
+<h1>Default test</h1>
+<h2 id="m1">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:setup</h2>
+<div style="padding-left:3em">
+<p>Error in loading data source: Error in initializing system data sources at &apos;D:\Workspace_STS_SaaSPlatform\Workspace_STS_Analytics\barley-analytics\analytics-data-connectors\barley.analytics.datasource.rdbms\src\test\resources\conf3\datasources\analytics-datasources.xml&apos; - You are running with invalid JAXP api or implementation. JAXP api/implementation of version 1.3.1 (included in JDK6) or higher is required. In case you are using ant, make sure ant 1.7.0 or higher is used - older versions of ant contain JAXP api/impl version 1.2 (in xml-apis.jar). If you want to keep using older ant versions, you have to configure it to use higher the JAXP api/impl versions.</p>
+barley.analytics.datasource.rdbms.RDBMSAnalyticsRecordStore.init(RDBMSAnalyticsRecordStore.java:99)
+<br/>at barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest.setup(MySQLAnalyticsRecordStoreTest.java:47)
+<br/>25 lines not shown
+<p>Caused by Error in initializing system data sources at &apos;D:\Workspace_STS_SaaSPlatform\Workspace_STS_Analytics\barley-analytics\analytics-data-connectors\barley.analytics.datasource.rdbms\src\test\resources\conf3\datasources\analytics-datasources.xml&apos; - You are running with invalid JAXP api or implementation. JAXP api/implementation of version 1.3.1 (included in JDK6) or higher is required. In case you are using ant, make sure ant 1.7.0 or higher is used - older versions of ant contain JAXP api/impl version 1.2 (in xml-apis.jar). If you want to keep using older ant versions, you have to configure it to use higher the JAXP api/impl versions.</p>
+barley.analytics.datasource.core.util.GenericUtils.populateSystemDataSource(GenericUtils.java:503)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.createGlobalCustomDataSourceRepo(GenericUtils.java:635)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.loadGlobalDataSource(GenericUtils.java:662)
+<br/>at barley.analytics.datasource.rdbms.RDBMSAnalyticsRecordStore.init(RDBMSAnalyticsRecordStore.java:97)
+<br/>at barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest.setup(MySQLAnalyticsRecordStoreTest.java:47)
+<br/>25 lines not shown
+<p>Caused by You are running with invalid JAXP api or implementation. JAXP api/implementation of version 1.3.1 (included in JDK6) or higher is required. In case you are using ant, make sure ant 1.7.0 or higher is used - older versions of ant contain JAXP api/impl version 1.2 (in xml-apis.jar). If you want to keep using older ant versions, you have to configure it to use higher the JAXP api/impl versions.</p>
+com.sun.xml.internal.bind.v2.util.XmlFactory.createTransformerFactory(XmlFactory.java:176)
+<br/>at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.createTransformerHandler(JAXBContextImpl.java:712)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.DomLoader$State.&lt;init&gt;(DomLoader.java:60)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.DomLoader.startElement(DomLoader.java:103)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.ProxyLoader.startElement(ProxyLoader.java:45)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext._startElement(UnmarshallingContext.java:559)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.startElement(UnmarshallingContext.java:538)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.InterningXmlVisitor.startElement(InterningXmlVisitor.java:60)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.SAXConnector.startElement(SAXConnector.java:153)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:229)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.scan(DOMScanner.java:112)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.scan(DOMScanner.java:95)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:356)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:337)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.populateSystemDataSource(GenericUtils.java:493)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.createGlobalCustomDataSourceRepo(GenericUtils.java:635)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.loadGlobalDataSource(GenericUtils.java:662)
+<br/>at barley.analytics.datasource.rdbms.RDBMSAnalyticsRecordStore.init(RDBMSAnalyticsRecordStore.java:97)
+<br/>at barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest.setup(MySQLAnalyticsRecordStoreTest.java:47)
+<br/>25 lines not shown
+<p>Caused by javax.xml.transform.TransformerFactory.setFeature(Ljava/lang/String;Z)V</p>
+com.sun.xml.internal.bind.v2.util.XmlFactory.createTransformerFactory(XmlFactory.java:169)
+<br/>at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.createTransformerHandler(JAXBContextImpl.java:712)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.DomLoader$State.&lt;init&gt;(DomLoader.java:60)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.DomLoader.startElement(DomLoader.java:103)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.ProxyLoader.startElement(ProxyLoader.java:45)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext._startElement(UnmarshallingContext.java:559)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.startElement(UnmarshallingContext.java:538)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.InterningXmlVisitor.startElement(InterningXmlVisitor.java:60)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.SAXConnector.startElement(SAXConnector.java:153)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:229)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:266)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.visit(DOMScanner.java:235)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.scan(DOMScanner.java:112)
+<br/>at com.sun.xml.internal.bind.unmarshaller.DOMScanner.scan(DOMScanner.java:95)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:356)
+<br/>at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:337)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.populateSystemDataSource(GenericUtils.java:493)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.createGlobalCustomDataSourceRepo(GenericUtils.java:635)
+<br/>at barley.analytics.datasource.core.util.GenericUtils.loadGlobalDataSource(GenericUtils.java:662)
+<br/>at barley.analytics.datasource.rdbms.RDBMSAnalyticsRecordStore.init(RDBMSAnalyticsRecordStore.java:97)
+<br/>at barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest.setup(MySQLAnalyticsRecordStoreTest.java:47)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:destroy</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieveWithPagination1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDataRecordCount</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDataRecordDeleteWithIds</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testTableMT</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testRecordRetrievalWithFixedCount</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDataRecordAddReadPerformance</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDuplicateRecordSearch</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDataRecordAddRetrieve</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDuplicateRecordDelete</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieve</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieveWithPagination2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testTableCreateDelete</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieveWithTimestampRange3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetrieveUpdate</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testLongTableNameCreate</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieveWithTimestampRange1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testMultipleDataRecordAddRetieveWithTimestampRange2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest:testDataRecordDeleteWithTimestamps</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

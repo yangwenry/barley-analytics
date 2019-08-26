@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest">
+        <methods>
+          <include name="testTableMT"/>
+          <include name="testMultipleDataRecordAddRetieveWithPagination2"/>
+          <include name="testMultipleDataRecordAddRetieveWithPagination1"/>
+          <include name="setup"/>
+          <include name="testDataRecordDeleteWithIds"/>
+          <include name="testDataRecordCount"/>
+          <include name="testMultipleDataRecordAddRetieve"/>
+          <include name="testMultipleDataRecordAddRetieveWithTimestampRange1"/>
+          <include name="testDataRecordDeleteWithTimestamps"/>
+          <include name="testMultipleDataRecordAddRetieveWithTimestampRange3"/>
+          <include name="testLongTableNameCreate"/>
+          <include name="testMultipleDataRecordAddRetieveWithTimestampRange2"/>
+          <include name="testDataRecordAddReadPerformance"/>
+          <include name="testDuplicateRecordSearch"/>
+          <include name="testDataRecordAddRetrieve"/>
+          <include name="testRecordRetrievalWithFixedCount"/>
+          <include name="testDuplicateRecordDelete"/>
+          <include name="testMultipleDataRecordAddRetrieveUpdate"/>
+          <include name="testTableCreateDelete"/>
+        </methods>
+      </class> <!-- barley.analytics.datasource.rdbms.mysql.MySQLAnalyticsRecordStoreTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

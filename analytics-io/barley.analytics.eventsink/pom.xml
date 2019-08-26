@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>barley.analytics</groupId>
+	  	<artifactId>analytics-io</artifactId>
+	  	<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion> 
+	<artifactId>barley.analytics.eventsink</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>CodeFarm Barley - Analytics EventSink Module</name>
+	
+	<dependencies>
+		<dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.datasource.commons</artifactId>
+        </dependency>        
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.dataservice.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.databridge.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.databridge.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.event.stream.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.event.processor.manager.core</artifactId>
+        </dependency>
+        
+        <!-- wso2 -->
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.application.deployer</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+	        
+	</dependencies>
+	
+</project>

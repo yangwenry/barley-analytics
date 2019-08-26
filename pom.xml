@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>barley.analytics</groupId>
+	<artifactId>barley-analytics</artifactId>
+	<packaging>pom</packaging>
+	<version>0.0.1</version>
+	<name>CodeFarm Barley - Analytics Platform Aggregator Pom</name>
+	<url>http://codefarm.co.kr</url>
+	
+	<modules>
+		<module>analytics-core</module>
+    	<module>analytics-data-connectors</module>
+	    <module>analytics-io</module>
+	    <module>analytics-processors</module>
+  	</modules>
+	
+	<repositories>
+		<repository>
+			<id>codefarm_barley</id>
+			<name>Codefarm Barley Repository</name>
+		  	<url>http://nexus.codefarm.co.kr/content/repositories/codefarm_barley</url>
+		  	<releases><enabled>true</enabled><updatePolicy>always</updatePolicy></releases>
+      		<snapshots><enabled>true</enabled><updatePolicy>always</updatePolicy></snapshots>
+		</repository>
+		
+        <repository>
+            <id>wso2-release</id>
+            <name>WSO2 release Repository</name>
+            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+        </repository>
+        
+        <repository>
+            <id>wso2-dist</id>
+            <name>WSO2 dist Repository</name>
+            <url>http://dist.wso2.org/maven2/</url>
+        </repository>
+                    
+    </repositories>
+    
+    <distributionManagement>
+		<repository>
+			<id>codefarm_barley</id>
+		  	<url>http://nexus.codefarm.co.kr/content/repositories/codefarm_barley</url>
+		</repository>
+	</distributionManagement>
+	
+	<dependencyManagement>
+    	<dependencies>
+    		<!-- barley -->
+    		<dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.dataservice.commons</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.dataservice.core</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+    		<dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.datasource.commons</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.datasource.core</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.datasource.rdbms</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.io.commons</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.api</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.spark.core</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics</groupId>
+	            <artifactId>barley.analytics.spark.utils</artifactId>
+	            <version>${project.version}</version> 
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics-common</groupId>
+	            <artifactId>barley.databridge.core</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics-common</groupId>
+	            <artifactId>barley.databridge.commons</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics-common</groupId>
+	            <artifactId>barley.databridge.agent</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics-common</groupId>
+	            <artifactId>barley.event.stream.core</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.analytics-common</groupId>
+	            <artifactId>barley.event.processor.manager.core</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.ndatasource</groupId>
+	            <artifactId>barley.ndatasource.core</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.ndatasource</groupId>
+	            <artifactId>barley.ndatasource.rdbms</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>barley.registry</groupId>
+	            <artifactId>barley.registry.core</artifactId>
+	            <version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+                <groupId>barley.commons</groupId>
+                <artifactId>barley.ntask.core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+	        
+	        <!-- wso2 -->
+	        <!-- <dependency>
+                <groupId>org.wso2.carbon.commons</groupId>
+                <artifactId>org.wso2.carbon.ntask.core</artifactId>
+                <version>${carbon.commons.version}</version>
+            </dependency> -->
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.application.deployer</artifactId>
+                <version>${carbon.kernel.version}</version>
+            </dependency>
+            
+            <!-- orbit -->
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.lucene</groupId>
+                <artifactId>lucene</artifactId>
+                <version>${lucene.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.com.esotericsoftware.kryo</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.com.leansoft</groupId>
+                <artifactId>bigqueue</artifactId>
+                <version>${orbit.version.bigqueue}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${orbit.version.disruptor}</version>
+            </dependency>            
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpcomponents-httpclient.version}</version>
+            </dependency>
+            
+            <!--spark dependencies added later-->
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.10</artifactId>
+                <version>${spark.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_2.10</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.spark</groupId>
+                <artifactId>spark-core_2.10</artifactId>
+                <version>${spark.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.spark</groupId>
+                <artifactId>spark-sql_2.10</artifactId>
+                <version>${spark.orbit.version}</version>
+            </dependency>            
+            
+            <!--analytics processors dependancies -->
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-reflect</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.spark-project.akka</groupId>
+                <artifactId>akka-remote_2.10</artifactId>
+                <version>${akka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.spark-project.akka</groupId>
+                <artifactId>akka-actor_2.10</artifactId>
+                <version>${akka.version}</version>
+            </dependency>
+            <dependency>
+			    <groupId>com.typesafe.akka</groupId>
+			    <artifactId>akka-slf4j_2.11</artifactId>
+			    <version>${akka.slf4j.version}</version>
+			</dependency>
+			<dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+			    <groupId>com.fasterxml.jackson.module</groupId>
+			    <artifactId>jackson-module-scala_2.10</artifactId>
+			    <version>${jackson.version}</version>
+			</dependency>
+            <dependency>
+                <groupId>org.wso2.json4s</groupId>
+                <artifactId>json4s-jackson_2.10</artifactId>
+                <version>${json4s.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty.wso2</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.twitter</groupId>
+                <artifactId>chill_2.10</artifactId>
+                <version>${chill.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-json</artifactId>
+                <version>${codahale.metrics.version}</version>
+            </dependency>
+            
+            <!-- START hbase + hadoop client dependencies -->
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
+                <version>${hbase.client.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.hadoop</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-client</artifactId>
+                <version>${hadoop.client.260.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.hbase</groupId>
+                <artifactId>hbase-shaded-client</artifactId>
+                <version>${hbase.client.orbit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.orbit.org.apache.hadoop</groupId>
+                <artifactId>hadoop-client</artifactId>
+                <version>${hadoop.client.260.orbit.version}</version>
+            </dependency>
+            <dependency>
+			    <groupId>org.apache.parquet</groupId>
+			    <artifactId>parquet-hadoop</artifactId>
+			    <version>${parquet.hadoop.version}</version>
+			</dependency>
+            <!-- END hbase + hadoop client dependencies -->
+            
+	        <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.esotericsoftware.kryo</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.version}</version>
+            </dependency>            
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+	            <groupId>org.apache.commons</groupId>
+	            <artifactId>commons-lang3</artifactId>
+	            <version>${commons-lang3.version}</version>
+	        </dependency>
+	        <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-logging.version}</version>
+            </dependency>
+	        <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <!-- <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>${netty.version}</version>
+            </dependency> -->
+            
+    	</dependencies>
+    </dependencyManagement>
+    
+    <build>
+    	<pluginManagement>
+    		<plugins>
+    			<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.8</version>
+                </plugin>
+                
+                <plugin>
+	            	<groupId>net.alchim31.maven</groupId>
+	              	<artifactId>scala-maven-plugin</artifactId>
+	              	<version>3.1.6</version>
+	          	</plugin>
+    		</plugins>
+    	</pluginManagement>
+    </build>
+	
+	<properties>
+        <!-- Sets the source encoding to UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.version>0.0.1</project.version>
+        
+        <!-- Maven Tools -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+	   	<maven.compiler.target>1.8</maven.compiler.target>
+	   	<maven.test.skip>true</maven.test.skip>		
+	   	
+	   	<!-- Hazelcast -->
+        <hazelcast.version>3.5</hazelcast.version>
+        
+        <!-- Carbon platform version -->
+        <carbon.kernel.version>4.4.9</carbon.kernel.version>
+        
+        <!-- WSO2 repository versions -->
+        <carbon.commons.version>4.5.4</carbon.commons.version>
+        
+        <!--analytics processors -->
+        <kryo.orbit.version>2.24.0.wso2v1</kryo.orbit.version>
+        <kryo.version>2.21</kryo.version>
+        <guava.version>19.0</guava.version>
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <spark.orbit.version>1.6.2.wso2v1</spark.orbit.version>
+        <scala.version>2.10.4</scala.version>
+        <akka.version>2.3.4-spark</akka.version>
+        <akka.slf4j.version>2.3.11</akka.slf4j.version>
+        <jackson.version>2.4.4</jackson.version>
+        <json4s.orbit.version>3.2.10.wso2v1</json4s.orbit.version>
+        <netty.version>3.9.0.Final</netty.version>
+        <netty-all.version>4.0.23.wso2v1</netty-all.version>
+        <chill.orbit.version>0.5.0.wso2v1</chill.orbit.version>
+        <codahale.metrics.version>3.1.2</codahale.metrics.version>
+        
+        <!--spark additional dependencies --> 
+        <spark.version>1.6.2</spark.version>
+        
+        <!-- Orbits -->
+        <lucene.orbit.version>5.2.1.wso2v1</lucene.orbit.version>
+        <orbit.version.bigqueue>0.7.0.wso2v1</orbit.version.bigqueue>
+        <orbit.version.disruptor>3.3.2.wso2v2</orbit.version.disruptor>
+        
+        <!-- Orbits for HBase client -->
+        <hbase.client.version>1.2.1</hbase.client.version>
+        <hadoop.client.260.version>2.7.2</hadoop.client.260.version>
+        <hbase.client.orbit.version>1.2.1.wso2v1</hbase.client.orbit.version>
+        <hadoop.client.260.orbit.version>2.7.2.wso2v1</hadoop.client.260.orbit.version>
+        <parquet.hadoop.version>1.8.1</parquet.hadoop.version>
+        
+        <!-- Misc -->
+        <gson.version>2.3.1</gson.version>
+        
+        <!-- Commons -->
+        <httpcomponents-httpclient.version>4.3.1.wso2v2</httpcomponents-httpclient.version>
+        <commons-logging.version>1.1</commons-logging.version>
+	   	
+	</properties>	    
+	
+
+</project>

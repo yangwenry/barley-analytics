@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>barley.analytics</groupId>
+	  	<artifactId>analytics-processors</artifactId>
+	  	<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion> 
+	<artifactId>barley.analytics.spark.event</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>CodeFarm Barley - Analytics Spark Event Publisher</name>
+	
+	<dependencies>
+		<!-- <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+        </dependency> -->
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.event.stream.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.spark.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.databridge.agent</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.databridge.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.event.processor.manager.core</artifactId>
+        </dependency>
+        
+	</dependencies>
+	
+</project>

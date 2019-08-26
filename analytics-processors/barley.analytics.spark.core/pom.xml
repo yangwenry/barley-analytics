@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>barley.analytics</groupId>
+	  	<artifactId>analytics-processors</artifactId>
+	  	<version>0.0.1</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion> 
+	<artifactId>barley.analytics.spark.core</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>CodeFarm Barley - Analytics Spark Core</name>
+	
+	<dependencies>
+		<!-- barley -->
+		<dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.datasource.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.datasource.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.datasource.rdbms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics</groupId>
+            <artifactId>barley.analytics.spark.utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.analytics-common</groupId>
+            <artifactId>barley.databridge.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.ndatasource</groupId>
+            <artifactId>barley.ndatasource.rdbms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.registry</groupId>
+            <artifactId>barley.registry.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>barley.commons</groupId>
+            <artifactId>barley.ntask.core</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        
+        <!-- 데이터분석 -->
+        <!-- <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+        </dependency> -->
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.spark-project.akka</groupId>
+            <artifactId>akka-actor_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.spark-project.akka</groupId>
+            <artifactId>akka-remote_2.10</artifactId>
+        </dependency>
+        <dependency>
+		    <groupId>com.typesafe.akka</groupId>
+		    <artifactId>akka-slf4j_2.11</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>org.wso2.json4s</groupId>
+            <artifactId>json4s-jackson_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.esotericsoftware.kryo</groupId>
+            <artifactId>kryo</artifactId>
+        </dependency>        
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+		    <groupId>com.fasterxml.jackson.module</groupId>
+		    <artifactId>jackson-module-scala_2.10</artifactId>
+		</dependency>
+		
+		<!-- spark 런타임시 필요 -->
+		<dependency>
+		    <groupId>org.apache.xbean</groupId>
+		    <artifactId>xbean-asm5-shaded</artifactId>
+		    <version>3.17</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.roaringbitmap</groupId>
+		    <artifactId>RoaringBitmap</artifactId>
+		    <version>0.4.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.janino</groupId>
+		    <artifactId>janino</artifactId>
+		    <version>3.0.8</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>io.netty.wso2</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.twitter</groupId>
+            <artifactId>chill_2.10</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-json</artifactId>
+        </dependency>
+        <dependency>
+		    <groupId>org.apache.avro</groupId>
+		    <artifactId>avro</artifactId>
+		    <version>1.8.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.google.code.findbugs</groupId>
+		    <artifactId>jsr305</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+		
+		<!-- Hadoop -->
+		<!-- <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.hbase</groupId>
+            <artifactId>hbase-shaded-client</artifactId>
+        </dependency> -->
+        <dependency>
+            <groupId>org.wso2.orbit.org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+        </dependency>
+        <dependency>
+		    <groupId>org.apache.parquet</groupId>
+		    <artifactId>parquet-hadoop</artifactId>
+		</dependency>
+        
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<!-- <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <version>2.15.2</version>
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin> -->    
+            
+            <plugin>
+				<groupId>net.alchim31.maven</groupId>
+	            <artifactId>scala-maven-plugin</artifactId>
+	            <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+          	</plugin>
+		</plugins>
+	</build>
+	
+</project>
