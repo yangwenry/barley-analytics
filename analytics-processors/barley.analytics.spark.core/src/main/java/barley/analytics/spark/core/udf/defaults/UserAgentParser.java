@@ -24,5 +24,23 @@ public class UserAgentParser {
         }
         return null;
     }
+    
+    /**
+    * This method would extract the browser form the given User-Agent String.
+    *
+    * @param userAgent The User-Agent string that is been sent.
+    *                  Ex:- Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.116 Chrome/48.0.2564.116 Safari/537.36
+    * @return The name of the browser extracted from the User-Agent.
+    */
+   public String getBrowserFromUserAgent(String userAgent) {
+       Parser parser = UserAgentInitializer.getInstance().getUaParser();
+       if (parser != null) {
+           UserAgent agent = parser.parseUserAgent(userAgent);
+           if (agent != null) {
+               return agent.family;
+           }
+       }
+       return null;
+   }
 
 }
