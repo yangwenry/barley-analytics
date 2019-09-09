@@ -77,6 +77,7 @@ import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
 import com.hazelcast.core.IAtomicLong;
 
+import barley.analytics.datasource.commons.AnalyticsIterator;
 import barley.analytics.datasource.commons.Record;
 import barley.analytics.datasource.commons.RecordGroup;
 import barley.analytics.datasource.commons.exception.AnalyticsException;
@@ -322,7 +323,8 @@ public class GenericUtils {
                                            RecordGroup[] rgs) throws AnalyticsException {
         List<Record> result = new ArrayList<>();
         for (RecordGroup rg : rgs) {
-            result.addAll(IteratorUtils.toList(rs.readRecords(rg)));
+         	AnalyticsIterator<Record> records = rs.readRecords(rg);
+        	result.addAll(IteratorUtils.toList(records));
         }
         return result;
     }
