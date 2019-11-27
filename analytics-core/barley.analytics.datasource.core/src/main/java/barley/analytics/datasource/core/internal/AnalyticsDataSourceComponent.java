@@ -20,8 +20,8 @@ package barley.analytics.datasource.core.internal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.osgi.framework.BundleContext;
-import org.osgi.service.component.ComponentContext;
+//import org.osgi.framework.BundleContext;
+//import org.osgi.service.component.ComponentContext;
 
 import barley.analytics.datasource.core.AnalyticsDataSourceService;
 import barley.ndatasource.core.DataSourceService;
@@ -36,7 +36,7 @@ public class AnalyticsDataSourceComponent {
     
     private static final Log log = LogFactory.getLog(AnalyticsDataSourceComponent.class);
     
-    protected void activate(ComponentContext ctx) {
+    protected void activate() {
         if (log.isDebugEnabled()) {
             log.debug("Starting AnalyticsDataSourceComponent#activate");
         }
