@@ -1,0 +1,1 @@
+mvn clean install 수행하면 플러그인이 컴파일에서 add-sources 수행하여 스칼라를 컴파일한다.  

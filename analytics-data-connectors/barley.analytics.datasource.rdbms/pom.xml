@@ -18,6 +18,10 @@
             <groupId>barley.analytics</groupId>
             <artifactId>barley.analytics.dataservice.core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>barley.ndatasource</groupId>
+            <artifactId>barley.ndatasource.core</artifactId>
+        </dependency>
         
         <dependency>
 		    <groupId>org.testng</groupId>

@@ -163,11 +163,11 @@
                 <artifactId>lucene</artifactId>
                 <version>${lucene.orbit.version}</version>
             </dependency>
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.wso2.orbit.com.esotericsoftware.kryo</groupId>
                 <artifactId>kryo</artifactId>
                 <version>${kryo.orbit.version}</version>
-            </dependency>
+            </dependency> -->
             <dependency>
                 <groupId>org.wso2.orbit.com.leansoft</groupId>
                 <artifactId>bigqueue</artifactId>
@@ -178,10 +178,15 @@
                 <artifactId>disruptor</artifactId>
                 <version>${orbit.version.disruptor}</version>
             </dependency>            
-            <dependency>
+            <!-- <dependency>
                 <groupId>org.wso2.orbit.org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>${httpcomponents-httpclient.version}</version>
+            </dependency> -->
+            <dependency>
+            	<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpclient.version}</version>
             </dependency>
             
             <!--spark dependencies added later-->
@@ -227,6 +232,12 @@
                 <groupId>org.spark-project.akka</groupId>
                 <artifactId>akka-remote_2.10</artifactId>
                 <version>${akka.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>io.netty</groupId>
+  						<artifactId>netty</artifactId>
+                	</exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.spark-project.akka</groupId>
@@ -251,7 +262,23 @@
             <dependency>
                 <groupId>io.netty.wso2</groupId>
                 <artifactId>netty-all</artifactId>
+                <version>${netty-all.wso2.version}</version>
+                <exclusions>
+                	<exclusion>
+                		<groupId>io.netty</groupId>
+                		<artifactId>netty-all</artifactId>
+                	</exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
                 <version>${netty-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>${netty.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.twitter</groupId>
@@ -347,12 +374,7 @@
                 <groupId>xerces</groupId>
                 <artifactId>xercesImpl</artifactId>
                 <version>2.11.0</version>
-            </dependency>
-            <!-- <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty</artifactId>
-                <version>${netty.version}</version>
-            </dependency> -->
+            </dependency>            
             
     	</dependencies>
     </dependencyManagement>
@@ -414,8 +436,9 @@
         <akka.slf4j.version>2.3.11</akka.slf4j.version>
         <jackson.version>2.4.4</jackson.version>
         <json4s.orbit.version>3.2.10.wso2v1</json4s.orbit.version>
+        <netty-all.wso2.version>4.0.23.wso2v1</netty-all.wso2.version>
+        <netty-all.version>4.0.23.Final</netty-all.version>
         <netty.version>3.9.0.Final</netty.version>
-        <netty-all.version>4.0.23.wso2v1</netty-all.version>
         <chill.orbit.version>0.5.0.wso2v1</chill.orbit.version>
         <codahale.metrics.version>3.1.2</codahale.metrics.version>
         
@@ -436,6 +459,7 @@
         
         <!-- Misc -->
         <gson.version>2.3.1</gson.version>
+        <httpclient.version>4.2.5</httpclient.version>
         
         <!-- Commons -->
         <httpcomponents-httpclient.version>4.3.1.wso2v2</httpcomponents-httpclient.version>

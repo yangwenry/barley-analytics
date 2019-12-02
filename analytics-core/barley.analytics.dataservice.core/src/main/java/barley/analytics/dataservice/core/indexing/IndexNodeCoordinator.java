@@ -42,7 +42,6 @@ import java.util.concurrent.locks.Lock;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.wso2.carbon.utils.FileUtil;
 
 import com.hazelcast.nio.ObjectDataInput;
 import com.hazelcast.nio.ObjectDataOutput;
@@ -64,6 +63,7 @@ import barley.analytics.dataservice.core.indexing.StagingIndexDataStore.StagingI
 import barley.analytics.datasource.commons.Record;
 import barley.analytics.datasource.commons.exception.AnalyticsException;
 import barley.analytics.datasource.core.util.GenericUtils;
+import barley.core.utils.FileUtil;
 
 /**
  * Analytics index operations node coordinator.
