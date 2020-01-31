@@ -37,7 +37,8 @@ public class AnalyticsConstants {
     public static final String TASK_SCRIPT_NAME_PROPERTY = "SCRIPT_NAME";
     public static final String ANALYTICS_SCRIPTS_LOCATION = "repository" + RegistryConstants.PATH_SEPARATOR
                                                             + "components" + RegistryConstants.PATH_SEPARATOR + RegistryConstants.PATH_SEPARATOR
-                                                            + "org.wso2.carbon.analytics.spark";
+                                                            //+ "org.wso2.carbon.analytics.spark";
+                                                            + "barley.analytics.spark";
     public static final String CARBON_APPLICATION_DEPLOYMENT_DIR = "carbonapps";
     public static final String CARBON_APPLICATION_EXT = ".car";
     public static final String ANALYTICS_MEDIA_TYPE = "application/xml";

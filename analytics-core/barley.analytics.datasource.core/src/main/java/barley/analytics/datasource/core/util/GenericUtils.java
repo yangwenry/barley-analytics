@@ -137,7 +137,8 @@ public class GenericUtils {
 
     private static final byte DATA_TYPE_OBJECT = 0x10;
 
-    public static final String WSO2_ANALYTICS_CONF_DIRECTORY_SYS_PROP = "wso2_custom_conf_dir";
+    //public static final String WSO2_ANALYTICS_CONF_DIRECTORY_SYS_PROP = "wso2_custom_conf_dir";
+    public static final String WSO2_ANALYTICS_CONF_DIRECTORY_SYS_PROP = "barley_custom_conf_dir";
     
     private static final String ANALYTICS_USER_TABLE_PREFIX = "ANX";
 
