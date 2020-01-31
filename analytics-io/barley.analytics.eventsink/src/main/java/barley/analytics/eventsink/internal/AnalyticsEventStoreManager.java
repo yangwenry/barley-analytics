@@ -121,6 +121,12 @@ public class AnalyticsEventStoreManager {
         }
         return null;
     }
+    
+    // (추가) 2020.01.30 - siddhi로 넘겨 실시간 분석기 스트림 연결을 위해 추가
+    public Set<AnalyticsEventStore> getAnalyticsEventStore(int tenantId) {
+        Set<AnalyticsEventStore> eventStoreConfigurations = tenantEventStoreMap.get(tenantId);
+        return eventStoreConfigurations;
+    }
 
 
     public AnalyticsEventStore removeEventStoreConfiguration(int tenantId, String eventStoreName) {
